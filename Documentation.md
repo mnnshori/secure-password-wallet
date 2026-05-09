@@ -1,5 +1,13 @@
 # Final Submission Documentation: Secure Password Wallet
 
+## GitHub Repository URL
+
+[Secure Password Wallet Source Code](https://github.com/mnnshori/secure-password-wallet)
+
+This repository contains the complete, version-controlled source code for the Secure Password Wallet project, including the frontend application, both backend microservices, and all associated configuration files.
+
+---
+
 ## 1. System Architecture
 
 The **Secure Password Wallet** utilizes a modular, microservices-based architecture designed for scalability, separation of concerns, and robust security.
@@ -135,3 +143,11 @@ This project was developed through a collaborative pair-programming session with
 * **Environment Bootstrapping:** Initial commands for Git initialization failed because macOS Xcode Command Line Tools were missing. The AI accurately diagnosed this based on the macOS prompt behavior and paused execution while the dependencies were manually installed.
 * **MongoDB Connection Issues:** Upon spinning up the microservices, Mongoose threw `ECONNREFUSED 127.0.0.1:27017` errors. The AI utilized terminal commands (`lsof -i :27017`) to determine that the local MongoDB server was not running. Once the server was manually started, the AI gracefully terminated and restarted the persistent `nodemon` processes to successfully establish the database connections.
 * **GitHub Authentication Failure:** During the Git push phase, the GitHub Personal Access Token (PAT) threw a `fatal: Authentication failed` error. The AI analyzed the error logs and correctly identified that the token was either expired, revoked, or lacked the appropriate `repo` scope, advising a token regeneration or SSH alternative to successfully complete the deployment.
+
+---
+
+## 6. Demonstration Video
+
+[Watch the Secure Password Wallet Demo](https://drive.google.com/file/d/16RKbYvFDeqkTTtnyejn5_Bu4cqr9yl2p/view?usp=sharing)
+
+This brief demonstration video showcases the complete user workflow, including account registration, secure login, and the real-time management of encrypted credentials within the dynamic glassmorphism interface.
