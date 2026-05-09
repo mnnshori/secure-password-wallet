@@ -1,15 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
-
-// Placeholder components
-const Login = () => <div>Login Page</div>;
-const Register = () => <div>Register Page</div>;
-const Dashboard = () => <div>Dashboard</div>;
+import Login from './components/Login';
+import Register from './components/Register';
+import Dashboard from './components/Dashboard';
 
 const PrivateRoute = ({ children }) => {
   const { user, loading } = useAuth();
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div className="loading-state">Loading...</div>;
   return user ? children : <Navigate to="/login" />;
 };
 
